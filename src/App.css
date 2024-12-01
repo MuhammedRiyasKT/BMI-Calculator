@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+/* BMI Calculator styling */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container h2, h3, p, label {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container h2 {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+.container {
+  box-shadow: 0px 0px 50px 10px rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 30px;
+  background-color: rgb(0, 0, 0);
+  width: 100%; /* Allow the container to adjust */
+  max-width: 400px; /* Limit the maximum width */
+}
+
+.container form {
+  margin-top: 10px;
+}
+
+.bmi-input {
+  width: 100%;
+  font-size: 1rem; /* Adjusted font size for smaller screens */
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 3px solid;
+}
+
+.btn {
+  width: 100%; /* Make buttons full-width for smaller screens */
+  font-size: 1rem; /* Adjust font size */
+  margin: 10px 0;
+  padding: 10px 0;
+  background-color: #000000;
+  color: #4794e0;
+  border: none;
+  outline: 3px solid #4794e0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-reload {
+  color: rgb(221, 47, 47);
+  outline: 3px solid rgb(221, 47, 47);
+}
+
+.center {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.p-msg {
+  margin: 10px 0;
+  text-align: center; /* Center text for smaller screens */
+}
+
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  height: 200px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px; /* Reduce padding */
   }
-  to {
-    transform: rotate(360deg);
+
+  .bmi-input {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Adjust button text size */
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px; /* Further reduce padding */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .bmi-input {
+    font-size: 0.8rem; /* Smaller font for inputs */
+    padding: 6px;
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Smaller button text */
+    padding: 8px 0;
+  }
+
+  .btn-reload {
+    margin-left: 0; /* Remove margin to align buttons vertically */
   }
 }
